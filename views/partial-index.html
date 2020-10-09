@@ -1,0 +1,19 @@
+
+<h2>Wineries</h2>
+<section>
+        <ul class="list-group list-group-flush">
+            ${data.map(winery =>
+                `
+                <li class="list-group-item"><a href="wineries/${winery.id}">${winery.name}</a>
+                
+                    `).join('')}
+                </ul>
+    <p class="text-center mt-3">
+        ${!!isLoggedIn ? `
+            <button class="btn btn-outline-dark"><a class="h3" href="/wineries/addwinery">Add New Winery</a></button>
+                    ` : `
+                    `}
+   
+    </p>
+        
+</section>

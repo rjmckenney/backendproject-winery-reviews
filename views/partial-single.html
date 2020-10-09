@@ -1,0 +1,40 @@
+<!-- style for testing purposes -->
+<div class="container mt-4">
+    <div class="row"> 
+        <div class="col-sm-4">
+            
+            ${wineryData.name}
+            <ul class="list-unstyled">
+                <li>${wineryData.address} ${wineryData.street}, ${wineryData.state} ${wineryData.zip}</li>
+                <!-- <li>Featured Wine: ${wineryData.primary_vine}</li>  -->
+            </ul>
+        </div>
+
+        <div class="col-sm-8">
+
+            <table class="table">
+                <tr class="table-active">
+                    <th>User</th>
+                    <th>Review</th>
+                </tr>
+                ${reviewsData.map(review => 
+                `<tr>
+                    <td><p class="h5">${review.name}</p></td>
+                    <td>
+                        <p class="h6">Rating: ${review.score} </p>
+                        <p>${review.content}</p>
+                    </td>
+                </tr>`
+            ).join('')}
+            </table>
+        </div>
+
+    ${!!isLoggedIn ? `
+            <div class="row mx-auto">
+                <button class="btn btn-outline-dark"><a class="h2" href="/reviews/newreview/${wineryData.id}">Add Review</a></button>
+            </div>
+                ` : `
+                `}
+    
+</div>
+</div>

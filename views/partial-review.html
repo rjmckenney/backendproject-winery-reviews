@@ -1,0 +1,20 @@
+
+<ul>
+    ${data.map(review => 
+        `<li>${review.score}: ${review.content}</li>`
+        ).join('')}
+    </ul>
+    
+    
+    <form action="reviews/addreview" method="POST">
+        <label>
+            Score
+            <input type="number" name="review_score" placeholder="Score for Winery"/>
+        </label>
+        <label>
+            Review
+            <input type="text" name="review_content" placeholder="Input Review">
+        </label>
+        <button type="submit">Add New Review</button>
+    </form>
+   

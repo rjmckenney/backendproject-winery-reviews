@@ -1,0 +1,30 @@
+
+
+html {
+  height: 100%;
+  margin: 0;
+}
+
+
+
+ body {
+  background: url("/images/fruits-grapes-grapevines-45209.jpg") no-repeat fixed center; 
+  height: auto;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.opaque {
+  background-color: rgba(245, 245, 245, 1);
+  opacity: .9;
+}
+
+a {
+  color: #7510b0;
+}
+
+.purple {
+  background-color: #7510b0;
+}
